@@ -8,11 +8,11 @@ You will never delete files again by mistake !!!
 
 To install `zrm`, enter the following command:
 
-    $ sudo curl -L https://git.framasoft.org/grumpyf0x48/zen-rm/raw/master/.zrm -o $HOME/.zrm
+    $ curl -L https://git.framasoft.org/grumpyf0x48/zen-rm/raw/master/.zrm -o $HOME/.zrm
 
 or you can use wget instead:
 
-    $ sudo wget https://git.framasoft.org/grumpyf0x48/zen-rm/raw/master/.zrm -O $HOME/.zrm
+    $ wget https://git.framasoft.org/grumpyf0x48/zen-rm/raw/master/.zrm -O $HOME/.zrm
 
 Then, add the following at the end of your `.bashrc` or `.zshrc` file:
 

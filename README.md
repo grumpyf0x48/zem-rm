@@ -2,7 +2,7 @@
 
 You will never delete files again by mistake !!!
 
-`zrm` is a safe alternative to the `rm` command.
+`zrm` is a safe alternative to the `rm` command for `Bash`.
 
 ## Installation
 
@@ -14,7 +14,7 @@ or you can use wget instead:
 
     $ wget https://git.framasoft.org/grumpyf0x48/zen-rm/raw/master/.zrm -O $HOME/.zrm
 
-Then, add the following at the end of your `.bashrc` or `.zshrc` file:
+Then, add the following at the end of your `.bashrc` file:
 
 ```sh
 if [ -f ~/.zrm ]; then

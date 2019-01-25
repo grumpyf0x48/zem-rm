@@ -24,11 +24,15 @@ and then the file will be removed without any confirmation because the `-f` flag
 
 To install `zrm`, enter the following command:
 
-    $ curl -L https://git.framasoft.org/grumpyf0x48/zen-rm/raw/master/.zrm -o $HOME/.zrm
+```sh
+curl -L https://git.framasoft.org/grumpyf0x48/zen-rm/raw/master/.zrm -o $HOME/.zrm
+```
 
 or you can use wget instead:
 
-    $ wget https://git.framasoft.org/grumpyf0x48/zen-rm/raw/master/.zrm -O $HOME/.zrm
+```sh
+wget https://git.framasoft.org/grumpyf0x48/zen-rm/raw/master/.zrm -O $HOME/.zrm
+```
 
 Then, add the following at the end of your `.bashrc` file:
 
@@ -40,14 +44,19 @@ fi
 
 You should then see a new alias defined in your next terminal session:
 
-    $ alias | grep rm
-    alias rm='zrm_rm'
+```sh
+alias | grep rm
+alias rm='zrm_rm'
+```
 
 ## Sample use
 
-    $ pyfourmond@charlie-watts:/tmp$ rm -fr *
-    Starting command: /bin/rm '-fr' '--interactive=always' 'gpg-6I0M4t' 'gpg-wblG4t' 'pulse-PKdhtXMmr18n' 'ssh-u64Il7bcm5Lm' 'systemd-private-aecde8cab7894de08a6d2e1b09b38d7c-colord.service-htyvHK' 'systemd-private-aecde8cab7894de08a6d2e1b09b38d7c-cups.service-luv082' 'systemd-private-aecde8cab7894de08a6d2e1b09b38d7c-rtkit-daemon.service-3IpH3v' 'Temp-6f00589d-8b37-4739-be39-2bd5964e35bc'
-    /bin/rm : descendre dans le répertoire « gpg-6I0M4t » ?
+```sh
+cd /tmp
+rm -fr *
+Starting command: /bin/rm '-fr' '--interactive=always' 'gpg-6I0M4t' 'gpg-wblG4t' 'pulse-PKdhtXMmr18n' 'ssh-u64Il7bcm5Lm' 'systemd-private-aecde8cab7894de08a6d2e1b09b38d7c-colord.service-htyvHK' 'systemd-private-aecde8cab7894de08a6d2e1b09b38d7c-cups.service-luv082' 'systemd-private-aecde8cab7894de08a6d2e1b09b38d7c-rtkit-daemon.service-3IpH3v' 'Temp-6f00589d-8b37-4739-be39-2bd5964e35bc'
+/bin/rm : descendre dans le répertoire « gpg-6I0M4t » ?
+```
 
 ## Configuration
 

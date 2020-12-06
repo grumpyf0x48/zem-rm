@@ -8,13 +8,13 @@ You will never delete files again by mistake !!!
 
 Using an alias for the `rm` command like this:
 
-```sh
+```console
 alias rm='rm -i'
 ```
 
 is completely useless because it will not prevent you from entering:
 
-```sh
+```console
 rm -f important_file
 ```
 
@@ -24,19 +24,19 @@ and then the file will be removed without any confirmation because the `-f` flag
 
 To install `zrm`, enter the following command:
 
-```sh
+```console
 curl -L https://git.framasoft.org/grumpyf0x48/zen-rm/raw/master/.zrm -o $HOME/.zrm
 ```
 
 or you can use wget instead:
 
-```sh
+```console
 wget https://git.framasoft.org/grumpyf0x48/zen-rm/raw/master/.zrm -O $HOME/.zrm
 ```
 
 Then, add the following at the end of your `.bashrc` file:
 
-```sh
+```console
 if [ -f ~/.zrm ]; then
     . ~/.zrm
 fi
@@ -44,14 +44,14 @@ fi
 
 You should then see a new alias defined in your next terminal session:
 
-```sh
+```console
 alias | grep rm
 alias rm='zrm_rm'
 ```
 
 ## Sample use
 
-```sh
+```console
 cd /tmp
 rm -fr *
 Starting command: /bin/rm '-fr' '--interactive=always' 'gpg-6I0M4t' 'gpg-wblG4t' 'pulse-PKdhtXMmr18n' 'ssh-u64Il7bcm5Lm' 'systemd-private-aecde8cab7894de08a6d2e1b09b38d7c-colord.service-htyvHK' 'systemd-private-aecde8cab7894de08a6d2e1b09b38d7c-cups.service-luv082' 'systemd-private-aecde8cab7894de08a6d2e1b09b38d7c-rtkit-daemon.service-3IpH3v' 'Temp-6f00589d-8b37-4739-be39-2bd5964e35bc'

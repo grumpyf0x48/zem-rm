@@ -25,7 +25,7 @@ zrm_interactive_mode="always"
 # Safe mode using -I
 # zrm_interactive_mode="once"
 
-# Define the condition to bypass the alias
+# Define the condition to bypass the alias creation
 zrm_bypassed() {
     false
 }

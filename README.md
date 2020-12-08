@@ -52,18 +52,38 @@ alias rm='zrm_rm'
 ## Sample use
 
 ```console
-cd /tmp
+cd some_folder
 rm -fr *
-Starting command: /bin/rm '-fr' '--interactive=always' 'gpg-6I0M4t' 'gpg-wblG4t' 'pulse-PKdhtXMmr18n' 'ssh-u64Il7bcm5Lm' 'systemd-private-aecde8cab7894de08a6d2e1b09b38d7c-colord.service-htyvHK' 'systemd-private-aecde8cab7894de08a6d2e1b09b38d7c-cups.service-luv082' 'systemd-private-aecde8cab7894de08a6d2e1b09b38d7c-rtkit-daemon.service-3IpH3v' 'Temp-6f00589d-8b37-4739-be39-2bd5964e35bc'
-/bin/rm : descendre dans le répertoire « gpg-6I0M4t » ?
+Starting command: /bin/rm '-fr' '--interactive=always' 'gpg-6I0M4t' 'gpg-wblG4t' 'pulse-PKdhtXMmr18n'
+/bin/rm : descendre dans le répertoire «gpg-6I0M4t» ?
 ```
 
 ## Configuration
 
-Zen rm can be configured with the following variables set in the `.zrm` file:
+Zen rm can be configured with the following variables set in the `.zrm` file.
 
-- **zrm_interactive_mode** corresponds to the `--interactive` flag of the `rm` command
-- **zrm_echo** allows to display the command before executing it
+### Customizing interactive mode
+
+**zrm_interactive_mode** corresponds to the `--interactive` flag of the `rm` command.
+
+### Displaying executed command
+
+**zrm_echo** allows to display the `rm` command before executing it.
+
+### Bypassing the alias creation
+
+It is also possible to bypass the creation of the `rm` alias, which can be useful in a Shell profile.
+
+To do this, all you need is define a function named **zrm_bypassed**, returning **true** when the alias should not be
+created.
+
+For example:
+
+```console
+zrm_bypassed() {
+    [[ $(pwd) = *runtime* ]]
+}
+```
 
 ## License
 

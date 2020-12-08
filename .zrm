@@ -25,6 +25,11 @@ zrm_interactive_mode="always"
 # Safe mode using -I
 # zrm_interactive_mode="once"
 
+# Define the condition to bypass the alias
+zrm_bypassed() {
+    false
+}
+
 # echo command
 zrm_echo=true
 
@@ -66,4 +71,6 @@ zrm_rm() {
     zrm_echodo /bin/rm "${zrm_safe_args[@]}"
 }
 
-alias rm='zrm_rm'
+if ! zrm_bypassed; then
+    alias rm='zrm_rm'
+fi

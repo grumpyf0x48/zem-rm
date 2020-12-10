@@ -18,7 +18,7 @@ is completely useless because it will not prevent you from entering:
 rm -f important_file
 ```
 
-and then the file will be removed without any confirmation because the `-f` flag is the last one on the command line !
+which will remove the file without any confirmation because the `-f` flag is the last one on the command line :disappointed: !
 
 ## Installation
 
@@ -55,7 +55,7 @@ alias rm='zrm_rm'
 cd some_folder
 rm -fr *
 Starting command: /bin/rm '-fr' '--interactive=always' 'gpg-6I0M4t' 'gpg-wblG4t' 'pulse-PKdhtXMmr18n'
-/bin/rm : descendre dans le répertoire «gpg-6I0M4t» ?
+/bin/rm : remove directory «gpg-6I0M4t» ?
 ```
 
 ## Configuration

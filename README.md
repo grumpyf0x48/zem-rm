@@ -42,6 +42,12 @@ if [ -f ~/.zrm ]; then
 fi
 ```
 
+using:
+
+```console
+echo '[ -f ~/.zrm ] && . ~/.zrm' | tee -a ${HOME}/.bashrc
+```
+
 You should then see a new alias defined in your next terminal session:
 
 ```console

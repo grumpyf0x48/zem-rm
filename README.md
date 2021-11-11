@@ -25,13 +25,13 @@ which will remove the file without any confirmation because the `-f` flag is the
 To install `zrm`, enter the following command:
 
 ```console
-curl -L https://git.framasoft.org/grumpyf0x48/zen-rm/raw/master/.zrm -o $HOME/.zrm
+curl -L https://raw.githubusercontent.com/grumpyf0x48/zem-rm/master/.zrm -o $HOME/.zrm
 ```
 
 or you can use wget instead:
 
 ```console
-wget https://git.framasoft.org/grumpyf0x48/zen-rm/raw/master/.zrm -O $HOME/.zrm
+wget https://raw.githubusercontent.com/grumpyf0x48/zem-rm/master/.zrm -O $HOME/.zrm
 ```
 
 Then, add the following at the end of your `.bashrc` file:
